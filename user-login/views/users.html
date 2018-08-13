@@ -1,0 +1,63 @@
+<form>
+  <div class="input-group mb-3">
+    <h1>{{ welcomeMessage }}</h1>
+  </div>
+  <div class="form-group">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="username-aria" value="Username"> Username </span>
+      </div>
+      <input type="text" class="form-control" id="username" ng-model="auth.username" placeholder="Enter username" aria-describedby="username-aria">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="password-aria" value="Password"> Password </span>
+      </div>
+      <input type="password" class="form-control" id="password" placeholder="Password" ng-model="auth.password" aria-describedby="password-aria">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="email-aria" value="Email"> Email </span>
+      </div>
+      <input type="email" class="form-control" id="email" placeholder="Email" ng-model="auth.email" aria-describedby="email-aria">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="user-select">Select user type:</label>
+    <select class='form-control' id="user-select" ng-model='auth.userType'>
+      <option value="" selected disabled>Please select user type</option>
+      <option value='Admin' selected>Admin</option>
+      <option value='Manager'>Manager</option>
+      <option value='Consultant'>Consultant</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <div ng-init="auth.gender='male'">
+      <input type="radio" name="options" id="option1" value="male" ng-model='auth.gender'> Male
+      <input type="radio" name="options" id="option2" value="female" ng-model='auth.gender'> Female
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="location-aria" value="Location"> Location </span>
+      </div>
+      <input type="text" class="form-control" id="location" placeholder="Location" ng-model="auth.location" aria-describedby="location-aria">
+    </div>
+  </div>
+
+  <div class="input-group mb-3">
+    <button type="button" class="btn btn-outline-primary" ng-click="saveDetails()">
+      Submit
+    </button>
+  </div>
+</form>

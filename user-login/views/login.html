@@ -1,0 +1,30 @@
+<div class="col-md-12">
+  <form ng-submit="login()">
+    <div class="input-group mb-3">
+      <h1>{{ welcomeMessage }}</h1>
+    </div>
+    <div class="form-group">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="username-aria" value="Username"> Username </span>
+        </div>
+        <input type="text" class="form-control" id="username" placeholder="Enter username" aria-describedby="username-aria" ng-model="auth.username">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="password-aria" value="Password"> Password </span>
+        </div>
+        <input type="password" class="form-control" id="password" placeholder="Password" aria-describedby="password-aria" ng-model="auth.password">
+      </div>
+    </div>
+
+    <div class="input-group mb-3">
+      <button type="submit" class="btn btn-outline-primary">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
